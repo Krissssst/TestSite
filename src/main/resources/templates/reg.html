@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="test,site,website"/>
+  <meta name="description" content="Пробный сайт"/>
+  <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+  <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <title>Тестовый сайт</title>
+</head>
+<body>
+<div id="page-wrap">
+  <header th:insert="blocks/header :: header"></header>
+  <div class="clear"><br/></div>
+  <center>
+    <div id="menu">Разделы
+      <hr/>
+    </div>
+    <div id="menuHrefs">
+      <a href="/about">О нас</a>
+      <a href="/feedback">Обратная связь</a>
+      <a href="/blog">Блог</a>
+      <a href="/blog/add">Добавить статью</a>
+      <a href="/">Главная</a>
+    </div>
+  </center>
+  <div id="wrapper">
+    <div id="articles">
+      <form action="/feedback" method="post">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" class="reg" placeholder="Введите email"/>
+        <label for="name">Введите ваше имя</label>
+        <input type="text" id="name" name="name" class="reg" placeholder="Введите ваше имя"/>
+        <label for="email">Введите пароль</label>
+        <input type="text" id="password" name="password" class="reg" placeholder="Введите пароль"/>
+        <input type="submit" value="Зарегистрироваться" id="send" name="send"/>
+      </form>
+    </div>
+  </div>
+</div>
+<footer>
+  <span class="left">Все права защищены &copy; 2023</span>
+  <span class="right">Социальные сети
+    <img src="/img/VK.png" alt="Группа Вконтакте" title="Группа Вконтакте"/></span>
+</footer>
+</body>
+</html>

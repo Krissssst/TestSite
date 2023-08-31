@@ -1,0 +1,579 @@
+@charset "utf-8";
+*{
+margin:0;
+padding:0;
+outline: none;
+}
+html{ height:100%;
+}
+body{
+width:100%;
+height:100%;
+color:#333;
+background:#f7f7f7;
+font-size:1em;
+font-family: "Segoe UI",sans-serif;
+line-height: 135%;
+
+}
+a{
+color: #f48b8b;
+text-decoration:none;
+transition: all.6s ease;
+-webkit-transition: all.6s ease;
+-ms-transition: all.6s ease;
+
+}
+a:hover{
+color: #8b9ff5;
+text-decoration:none;
+transition: all.6s ease;
+-webkit-transition: all.6s ease;
+-ms-transition: all.6s ease;
+
+}
+
+a:active{color: #8ce4a6}
+
+
+/* Selection Block */
+
+::selection {background: #f58b8b; color: #fff;}
+::-webkit-election {background: #f58b8b; color: #fff;}
+::-ms-election {background: #f58b8b; color: #fff;}
+
+img{
+max-width: 100%;
+height:auto;
+width: auto\9;
+}
+
+hr{
+display:block;
+border: 0px;
+height:1px;
+border-top:1px solid #ccc;
+padding:0;
+
+}
+.right{
+float: right;
+}
+.left{float:left;}
+.clear{
+clear:both;
+}
+
+
+header,footer {
+
+width:98%;
+background-color: #fff;
+float:left;
+
+}
+header{
+border-bottom: 2px solid silver;
+padding:1%;
+}
+#logo{
+font-size:2em;
+font-family: Comic Sans MS, sans-serif;
+}
+
+#info{
+color:#000000;
+font-family: Comic Sans MS, sans-serif;
+}
+#info:hover{color:#8b9ff5;}
+.contact{
+font-size:1.5em;
+font-family: Comic Sans MS, sans-serif;
+margin-left:20px;
+margin-right:20px;
+}
+input[type=text].field{
+border-radius: 5px;
+border: 2px solid silver;
+padding: 5px;
+
+}
+input[type=text].field:focus { border: 2px solid #f48b8b;
+}
+#menu{
+color:#666;
+font-family:Comic Sans MS,sens-serif;
+font-size: 1.7em;
+
+}
+
+#menu hr{
+width:500px;
+max-width:100%;
+margin-top:5px;
+margin-bottom:10px;
+}
+
+#menuHrefs a{
+padding: 10px;
+border-radius:5px;
+margin-right:5px;
+color:#626262;
+}
+#menuHrefs a:hover{
+background-color:#f48b8b;}
+
+
+/* Основные стили для сайта */
+
+#wrapper{
+width:100%;
+float:left;
+margin-top:20px;
+position: relative;
+}
+
+#wrapper #articles{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 80%;
+  margin-left: 10%;
+}
+@media (min-width: 700px){
+#wrapper #articles article{
+ flex-basis: 30%;
+  border: 1px solid silver;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #fafafa;
+  margin-right: 2%;
+  min-height: 400px;
+}
+}
+@media (max-width: 699px){
+#wrapper #articles article{
+ float:left;
+ width:96%;
+  border: 1px solid silver;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #fafafa;
+  margin-right: 2%;
+  margin-bottom:10px;
+
+}
+}
+#wrapper #articles_now {
+float:left;
+padding:10px;
+margin-top:10px;
+margin-bottom:10px;
+border-radius:5px;
+font-size:1.2em;
+}
+
+#wrapper #articles article img{
+width:100%;
+height: 200px;
+object-fit:cover;
+border-radius:5px 5px 0px 0px;
+border-bottom:1px solid silver;
+margin-bottom:10px;
+}
+#wrapper #articles article h2{
+width:90%;
+margin-left:5%;
+font-width: normal;
+font-size:1.7em;
+color:#f48b8b;
+font-family:Comic Sans MS,sens-serif;
+}
+#wrapper #articles article p{
+width:80%;
+margin-left:10%;
+text-indent:1em;
+
+}
+
+#wrapper #articles article a{
+padding:5px 5px;
+background-color:#ed7b7b;
+margin-left:5%;
+border-radius:7px;
+color:#fff;
+float:left;
+margin-top:10px;
+margin-bottom:10px;
+float:left;
+}
+#wrapper #articles article a:hover{
+background-color:#8b9ff5;}
+
+
+/* Стили для добовления записи */
+.add input{
+width:44.444%;
+float:left;
+clear:both;
+background-color:#fafafa;
+border:2px solid #f48b8b;
+border-radius: 5px;
+padding:10px;
+font-size:0.7em;
+margin-bottom:20px;
+}
+.add input:focus,.add textarea:focus{border: 2px solid silver;}
+
+.add textarea{
+width:80%;
+height:40%;
+float:left;
+clear:both;
+background-color:fafafa;
+border:2px solid #f48b8b;
+font-family: Comic Sans MS, sans-serif;
+border-radius: 5px;
+padding:10px;
+font-size:1.5em;
+color:#silver;
+
+}
+
+#add{
+width:28%;
+float:left;
+padding:10px;
+background-color:#f48b8b;
+cursor:pointer;
+margin-top:10px;
+border-radius:5px;
+font-size:0.7em;
+color:#fff;
+}
+
+#menu_Cat hr{
+width:500px;
+max-width:100%;
+margin-top:5px;
+margin-bottom:10px;
+display:block;
+border: 0px;
+height:1px;
+border-top:1px solid #f48b8b;
+padding:0;
+}
+#menu_Cat{
+color:#666;
+font-family:Comic Sans MS,sens-serif;
+font-size: 1.7em;
+
+}
+#wrapper_Cat{
+position: relative;
+  width:100%;
+  padding:2% 0;
+  border-bottom: 2px solid silver;
+  border-top: 2px solid silver;
+  margin:20px 0;
+  float:left;
+  background-size: cover;
+}
+.addImg {
+  margin-top: 15px;
+  text-align: center;
+  color:#fffafa;
+   margin-left: -18.5%;
+}
+
+.img {
+margin-top:15px;
+  display: inline-block;
+  width: 25%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Стили для edit */
+
+.edit{
+font-family: Comic Sans MS, sans-serif;
+color:#8b9ff5;
+field:center;
+}
+input .form_control_edit{
+width:90%;
+height:20%;
+float:left;
+background-color:#fafafa;
+border-radius:5px;
+border:1px solid silver;
+box-sizing:border-box;
+padding:1%;
+}
+#name_edit{
+text-align: center;
+margin-top:10px;
+margin-bottom:10px;
+padding:15px;
+font-family: Comic Sans MS, sans-serif;
+color:#8b9ff5;
+}
+
+/* Стили для блока детальей */
+
+.blog_details{
+width:98%;
+height:98%;
+float:center;
+padding:1%;
+margin-top:10px;
+font-size:1.2em;
+margin-bottom:10px;
+font-family: Comic Sans MS, sans-serif;
+}
+.contmain_details{
+float:center;
+padding:20px;
+border:2px solid #f37a7a;
+border-radius:5px;
+font-size:1.2em;
+margin-top:15px;
+margin-bottom:15px;
+font-family: Comic Sans MS, sans-serif;
+color:#f37a7a;
+
+}
+.inline-block{
+display: flex;
+
+}
+.column {
+  flex: 1;
+}
+#remove{
+background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #f48b8b;
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 1em;
+  font-family: Comic Sans MS, sans-serif;
+}
+#remove:focus {
+color: #8b9ff5;
+}
+
+
+/* Стили длч странички о нас */
+#about_us{
+width:60%;
+float:left;
+background-color:#fafafa;
+border-radius:5px;
+border:1px solid silver;
+box-sizing:border-box;
+padding:1%;
+}
+
+#columnRight{
+width:30%;
+margin-left:5%;
+float:left;
+background-color:#fafafa;
+border-radius:5px;
+border:1px solid silver;
+box-sizing:border-box;
+padding:1%;
+}
+.p_about{
+font-family: Comic Sans MS, sans-serif;
+color:#f48b8b;
+}
+
+/* Стили для странички регистрации*/
+
+#wrapper #articles #reg{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 60%;
+  margin-left: 10%;
+  margin-bottom:10px;
+}
+
+/* Стили для формы */
+
+form{
+width:60%;
+margin-left:20%;
+float:left;
+}
+form label{
+width:100%;
+float:left;
+margin-bottom:10px;
+margin-top:10px;
+}
+
+form input{
+
+width:60%;
+float:left;
+background-color:#fafafa;
+border-radius:5px;
+border:1px solid silver;
+box-sizing:border-box;
+padding:1%;
+
+}
+form input:focus, form textarea:focus { border: 2px solid #f48b8b;
+}
+
+form textarea{
+width:60%;
+float:left;
+clear:both;
+background-color:#fafafa;
+border:2px solid silver;
+border-radius: 5px;
+padding:10px;
+font-size:1em;
+
+}
+form #send{
+float:left;
+padding:10px;
+background-color:#f37a7a;
+cursor:pointer;
+margin-top:10px;
+border-radius:5px;
+font-size:1.2em;
+color:#fff;
+}
+form #send:hover{background-color:#8b9ff5;}
+
+/* Стили раздел блога */
+
+.main{
+
+width:100%;
+background-color: #fff;
+float:left;
+
+}
+
+.blog{
+float:center;
+padding:10px;
+border:2px solid #fff;
+background-color:#fff;
+margin-top:10px;
+border-radius:5px;
+font-size:1.2em;
+margin-top:10px;
+margin-bottom:10px;
+font-family: Comic Sans MS, sans-serif;
+}
+.contmain{
+float:center;
+padding:15px;
+border:2px solid #f37a7a;
+background-color:#fff;
+margin-top:10px;
+border-radius:5px;
+font-size:1.2em;
+margin-top:15px;
+margin-bottom:15px;
+font-family: Comic Sans MS, sans-serif;
+color:#f37a7a;
+
+}
+.contmain > * {
+  margin-bottom: 20px;
+}
+#name{
+margin-top:10px;
+margin-bottom:10px;
+padding:15px;
+font-family: Comic Sans MS, sans-serif;
+color:#8b9ff5;
+}
+#anons{
+margin-top:10px;
+margin-bottom:15px;
+padding:15px;
+font-family: Comic Sans MS, sans-serif;
+color:#8b9ff5;
+}
+.details{
+margin-bottom:10px;
+background-color:#fff;
+cursor:pointer;
+border-radius:5px;
+color:#8b9ff5;
+border: 2px solid #8b9ff5;
+margin-top:5px;
+padding:5px;
+}
+
+/* Центральный блок сайта  */
+
+#main_soc_block{
+width:100%;
+padding:2% 0;
+border-bottom: 2px solid silver;
+border-top: 2px solid silver;
+box-sizing;border-box;
+margin:20px 0;
+float:left;
+background:url('../img/fon.jpg') repeat-x center 0;
+background-size:auto 100% ;
+height:180px;
+max-width:100%;
+}
+
+#main_soc_block_in{
+text-line:center;
+padding:1%;
+height:100px;
+width:500px;
+}
+/* Стили img about*/
+
+#about_img{
+width:100%;
+background-size: cover;
+}
+
+/* Стили для футера */
+
+footer{
+padding:1%;
+border-top: 2px solid silver;
+margin-top: 10px;
+padding-bottom: 2%;
+
+}
+footer img{
+width:10%;
+float:right;
+margin-left: 10px;
+
+}
+#page-wrap:after{
+contact:"";
+display:block;
+}
+footer,#page-wrap:after{
+height:10px;
+}
+#page-wrap{
+min-height:94%;
+margin-bottom:-10px;
+}

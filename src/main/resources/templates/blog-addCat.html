@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="test,site,website"/>
+    <meta name="description" content="Пробный сайт"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <title>Тестовый сайт</title>
+</head>
+<body>
+<div id="page-wrap">
+    <header th:insert="blocks/header :: header"></header>
+    <div class="clear"><br/></div>
+    <center>
+        <div id="menu_Cat">Разделы
+            <hr/>
+        </div>
+        <div id="menuHrefs">
+            <a href="/about">О нас</a>
+            <a href="/feedback">Обратная связь</a>
+            <a href="/blog">Блог</a>
+            <a href="/blog/add">Добавить статью</a>
+            <a href="/">Главная</a>
+        </div>
+    </center>
+    <div id="wrapper">
+        <div id="articles" class="add">
+            <form action="/blog/addCat" method="post">
+                <input type="text" name="title" placeholder="Введите название статьи" class="form-control"/><br>
+                <input type="text" name="anons" placeholder="Введите анонс статьи" class="form-control"/><br>
+                <textarea name="full_text" placeholder="Введите полный текст статьи"
+                          class="form-control"></textarea><br>
+                <input type="submit" value="Добавить статью" id="add" name="add"/>
+                <br>
+            </form>
+        </div>
+    </div>
+        <div class="addImg">
+            <div class="img">
+                <article id="img"><img src="/img/fonСat.jpg" alt="Изображение" title="Изображение"/></article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="left">Все права защищены &copy; 2023</span>
+    <span class="right">Социальные сети
+    <img src="/img/VK.png" alt="Группа Вконтакте" title="Группа Вконтакте"/></span>
+</footer>
+</body>
+</html>

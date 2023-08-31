@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="test,site,website"/>
+    <meta name="description" content="Пробный сайт"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <title>Тестовый сайт</title>
+</head>
+<body>
+<div id="page-wrap">
+    <header th:insert="blocks/header :: header"></header>
+    <div class="clear"><br/></div>
+    <center>
+        <div id="menu_Cat">Разделы
+            <hr/>
+        </div>
+        <div id="menuHrefs">
+            <a href="/about">О нас</a>
+            <a href="/feedback">Обратная связь</a>
+            <a href="/blog">Блог</a>
+            <a href="/blog/add">Добавить статью</a>
+            <a href="/">Главная</a>
+        </div>
+    </center>
+    <div id="wrapper">
+        <div id="articles" class="add">
+            <div class="blog_details">
+                <div th:each="el :${post}" class=" alert alert-info mt-2 ">
+                    <h1 id="name" th:text="${el.title}"/>
+                    <div class="contmain_details">
+                        <p th:text="${el.full_text}"/>
+                    </div>
+                    <br/>
+                    <p th:text="'Просмотры: ' + ${el.views}"/><br/>
+                    <div class="inline-block">
+                        <div class="column">
+                            <a th:href="'/blog/'+${el.id} +'/edit'" class="add">Редактировать</a></br></br>
+                        </div>
+                        <div class="column">
+                            <form th:action="'/blog/' + ${el.id} +'/remove'" method="post">
+                                <input type="submit" value="Удалить" id="remove"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<footer>
+    <span class="left">Все права защищены &copy; 2023</span>
+    <span class="right">Социальные сети
+    <img src="/img/VK.png" alt="Группа Вконтакте" title="Группа Вконтакте"/></span>
+</footer>
+</body>
+</html>
